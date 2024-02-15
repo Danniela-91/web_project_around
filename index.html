@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="JavaScript Basico, introduzindo o DOM" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, DOM, Nojekyll" />
+    <meta name="author" content="Daniela Tenório" />
+    <link rel="stylesheet" href="./pages/index.css" />
+    <title>Around The U.S.</title>
+  </head>
+  <!--Body-->
+  <body>
+    <div class="popup">
+      <div class="popup__container">
+        <button class="button popup__btn-close">
+          <img
+            src="./images/close-icon.svg"
+            alt="Ícone do botão de fechar popup"
+            class="popup__close-icon"
+          />
+        </button>
+        <h2 class="popup__title">Editar perfil</h2>
+        <form class="popup__form">
+          <fieldset class="popup__fieldset">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="popup__input popup__input_type_name"
+              placeholder="Nome"
+            />
+            <input
+              type="text"
+              id="about"
+              name="about"
+              class="popup__input popup__input_type_about"
+              placeholder="Sobre mim"
+            />
+          </fieldset>
+          <button class="button popup__btn-submit">Salvar</button>
+        </form>
+      </div>
+    </div>
+    <div class="page">
+      <header class="header container">
+        <img
+          src="./images/logo-around.svg"
+          class="header__logo"
+          alt="Logo do site Around"
+        />
+      </header>
+      <main class="main container">
+        <section class="profile">
+          <img
+            src="./images/avatar.png"
+            class="profile__avatar"
+            alt="Imagem de avatar do usuário"
+          />
+          <div class="profile__info">
+            <div class="profile__name-wrapper">
+              <h1 class="profile__name">Jacques Cousteau</h1>
+              <button class="button profile__btn-edit">
+                <img
+                  src="./images/edit-icon.svg"
+                  alt="Ícone do botão de editar perfil"
+                />
+              </button>
+            </div>
+            <p class="profile__about">Explorar</p>
+          </div>
+          <button class="button profile__btn-add" onclick="togglePopup()">
+            <img
+              src="./images/plus-icon.svg"
+              alt="Ícone do botão de adicionar novos posts"
+            />
+          </button>
+        </section>
+
+        <section class="posts">
+          <ul class="posts__list">
+            <li class="posts__item">
+              <div class="posts__image-wrapper">
+                <button class="posts__trash-btn"></button>
+                <img
+                  src="./images/Vale de Yosemite.jpg"
+                  class="posts__image"
+                  alt="Foto da paisagem do Vale de Yosemite"
+                />
+              </div>
+              <div class="posts__description">
+                <h2 class="posts__title">Vale de Yosemite</h2>
+                <button class="button posts__btn-like"></button>
+              </div>
+            </li>
+            <li class="posts__item">
+              <div class="posts__image-wrapper">
+                <button class="posts__trash-btn"></button>
+                <img
+                  src="./images/Lago Louise.png"
+                  class="posts__image"
+                  alt="Foto da paisagem do Lago Louise"
+                />
+              </div>
+              <div class="posts__description">
+                <h2 class="posts__title">Lago Louise</h2>
+                <button class="button posts__btn-like"></button>
+              </div>
+            </li>
+            <li class="posts__item">
+              <div class="posts__image-wrapper">
+                <button class="posts__trash-btn"></button>
+                <img
+                  src="./images/Montanhas Carecas.png"
+                  class="posts__image"
+                  alt="Foto da paisagem das Montanhas Carecas"
+                />
+              </div>
+              <div class="posts__description">
+                <h2 class="posts__title">Montanhas Carecas</h2>
+                <button class="button posts__btn-like"></button>
+              </div>
+            </li>
+            <li class="posts__item">
+              <div class="posts__image-wrapper">
+                <button class="posts__trash-btn"></button>
+                <img
+                  src="./images/Latemar.png"
+                  class="posts__image"
+                  alt="Foto da paisagem de Latemar"
+                />
+              </div>
+              <div class="posts__description">
+                <h2 class="posts__title">Latemar</h2>
+                <button class="button posts__btn-like"></button>
+              </div>
+            </li>
+            <li class="posts__item">
+              <div class="posts__image-wrapper">
+                <button class="posts__trash-btn"></button>
+                <img
+                  src="./images/Vanoise National.png"
+                  class="posts__image"
+                  alt="Foto da paisagem de Vanoise National"
+                />
+              </div>
+              <div class="posts__description">
+                <h2 class="posts__title">Vanoise National</h2>
+                <button class="button posts__btn-like"></button>
+              </div>
+            </li>
+            <li class="posts__item">
+              <div class="posts__image-wrapper">
+                <button class="posts__trash-btn"></button>
+                <img
+                  src="./images/Lago di Braies.png"
+                  class="posts__image"
+                  alt="Foto da paisagem do Lago di Braies"
+                />
+              </div>
+              <div class="posts__description">
+                <h2 class="posts__title">Lago di Braies</h2>
+                <button class="button posts__btn-like"></button>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </main>
+      <footer class="footer container">
+        <p class="footer__text">© 2023 Daniela Tenório</p>
+      </footer>
+    </div>
+    <script src="./scripts/scripts.js"></script>
+  </body>
+</html>
